@@ -14,6 +14,17 @@
 		D96D03132B09B7BB00E2461B /* LibraLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D03122B09B7BB00E2461B /* LibraLifeTests.swift */; };
 		D96D031D2B09B7BB00E2461B /* LibraLifeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D031C2B09B7BB00E2461B /* LibraLifeUITests.swift */; };
 		D96D031F2B09B7BB00E2461B /* LibraLifeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D031E2B09B7BB00E2461B /* LibraLifeUITestsLaunchTests.swift */; };
+		D96D032C2B09BD6200E2461B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D032B2B09BD6200E2461B /* LoadingView.swift */; };
+		D96D032E2B09BDAD00E2461B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D032D2B09BDAD00E2461B /* SearchView.swift */; };
+		D96D03302B09BDC800E2461B /* ShelvesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D032F2B09BDC800E2461B /* ShelvesView.swift */; };
+		D96D03322B09BDDD00E2461B /* BookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D03312B09BDDD00E2461B /* BookDetailsView.swift */; };
+		D96D03342B09BE3500E2461B /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D03332B09BE3500E2461B /* AddBookView.swift */; };
+		D96D03382B09BF7000E2461B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D03372B09BF7000E2461B /* SearchViewModel.swift */; };
+		D96D033A2B09BF7D00E2461B /* ShelvesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D03392B09BF7D00E2461B /* ShelvesViewModel.swift */; };
+		D96D033C2B09BF8D00E2461B /* BookDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D033B2B09BF8D00E2461B /* BookDetailsViewModel.swift */; };
+		D96D033E2B09BF9D00E2461B /* AddBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D033D2B09BF9D00E2461B /* AddBookViewModel.swift */; };
+		D96D03452B09C0C500E2461B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D03442B09C0C500E2461B /* Book.swift */; };
+		D96D03472B09C0CC00E2461B /* Shelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D03462B09C0CC00E2461B /* Shelf.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +55,17 @@
 		D96D03182B09B7BB00E2461B /* LibraLifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibraLifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96D031C2B09B7BB00E2461B /* LibraLifeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraLifeUITests.swift; sourceTree = "<group>"; };
 		D96D031E2B09B7BB00E2461B /* LibraLifeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraLifeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D96D032B2B09BD6200E2461B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		D96D032D2B09BDAD00E2461B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		D96D032F2B09BDC800E2461B /* ShelvesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelvesView.swift; sourceTree = "<group>"; };
+		D96D03312B09BDDD00E2461B /* BookDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsView.swift; sourceTree = "<group>"; };
+		D96D03332B09BE3500E2461B /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		D96D03372B09BF7000E2461B /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		D96D03392B09BF7D00E2461B /* ShelvesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelvesViewModel.swift; sourceTree = "<group>"; };
+		D96D033B2B09BF8D00E2461B /* BookDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewModel.swift; sourceTree = "<group>"; };
+		D96D033D2B09BF9D00E2461B /* AddBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewModel.swift; sourceTree = "<group>"; };
+		D96D03442B09C0C500E2461B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		D96D03462B09C0CC00E2461B /* Shelf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shelf.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				D96D03012B09B7B800E2461B /* LibraLifeApp.swift */,
-				D96D03032B09B7B800E2461B /* ContentView.swift */,
+				D96D03432B09C0A200E2461B /* Models */,
+				D96D03362B09BF0000E2461B /* View */,
+				D96D03352B09BEE400E2461B /* ViewModels */,
 				D96D03052B09B7BA00E2461B /* Assets.xcassets */,
 				D96D03072B09B7BA00E2461B /* Preview Content */,
 			);
@@ -125,6 +149,40 @@
 				D96D031E2B09B7BB00E2461B /* LibraLifeUITestsLaunchTests.swift */,
 			);
 			path = LibraLifeUITests;
+			sourceTree = "<group>";
+		};
+		D96D03352B09BEE400E2461B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D96D03372B09BF7000E2461B /* SearchViewModel.swift */,
+				D96D03392B09BF7D00E2461B /* ShelvesViewModel.swift */,
+				D96D033B2B09BF8D00E2461B /* BookDetailsViewModel.swift */,
+				D96D033D2B09BF9D00E2461B /* AddBookViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D96D03362B09BF0000E2461B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D96D03032B09B7B800E2461B /* ContentView.swift */,
+				D96D032B2B09BD6200E2461B /* LoadingView.swift */,
+				D96D032D2B09BDAD00E2461B /* SearchView.swift */,
+				D96D032F2B09BDC800E2461B /* ShelvesView.swift */,
+				D96D03312B09BDDD00E2461B /* BookDetailsView.swift */,
+				D96D03332B09BE3500E2461B /* AddBookView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D96D03432B09C0A200E2461B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D96D03442B09C0C500E2461B /* Book.swift */,
+				D96D03462B09C0CC00E2461B /* Shelf.swift */,
+			);
+			name = Models;
+			path = ViewModels/Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +315,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D96D03472B09C0CC00E2461B /* Shelf.swift in Sources */,
+				D96D03342B09BE3500E2461B /* AddBookView.swift in Sources */,
+				D96D03302B09BDC800E2461B /* ShelvesView.swift in Sources */,
+				D96D033A2B09BF7D00E2461B /* ShelvesViewModel.swift in Sources */,
+				D96D03382B09BF7000E2461B /* SearchViewModel.swift in Sources */,
+				D96D033C2B09BF8D00E2461B /* BookDetailsViewModel.swift in Sources */,
+				D96D033E2B09BF9D00E2461B /* AddBookViewModel.swift in Sources */,
+				D96D032E2B09BDAD00E2461B /* SearchView.swift in Sources */,
 				D96D03042B09B7B800E2461B /* ContentView.swift in Sources */,
+				D96D03452B09C0C500E2461B /* Book.swift in Sources */,
 				D96D03022B09B7B800E2461B /* LibraLifeApp.swift in Sources */,
+				D96D03322B09BDDD00E2461B /* BookDetailsView.swift in Sources */,
+				D96D032C2B09BD6200E2461B /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
