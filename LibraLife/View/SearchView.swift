@@ -70,7 +70,7 @@ struct SearchView: View {
                             .padding(.horizontal,50)
                             .padding(.bottom,30)
                         Button(action: {
-                            
+                            // add book
                             print("Add Book tapped")
                         }) {
                             Text("Manually \n Add Book")
