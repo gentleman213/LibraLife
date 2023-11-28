@@ -6,16 +6,17 @@
 //
 
 import Foundation
+import SwiftData
 
 
-struct Book: Identifiable {
-    let id: UUID
+@Model
+class Book{
     let title: String
     let author: String
 
-    init(id: UUID = UUID(), title: String, author: String) {
-        self.id = id
+    init(title: String, author: String) {
         self.title = title
         self.author = author
     }
 }
+

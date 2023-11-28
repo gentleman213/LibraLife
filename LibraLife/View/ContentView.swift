@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isLoading = true
-    
     var body: some View {
+        
         TabView {
             // Search View
             NavigationView {
@@ -37,9 +36,9 @@ struct ContentView: View {
             }
             
 
-        }.accentColor(Color.black)
-            
-
+        }
+        .modelContainer(for: [Book.self, Shelf.self])
+        .accentColor(Color.black)
     }
 }
 

@@ -5,88 +5,96 @@
 //  Created by Thibaud Barberon on 18/11/2023.
 //
 
+
 import SwiftUI
+import SwiftData
+
 
 struct BookDetailsView: View {
-    @State private var bookTitle: String = ""
-    @State private var author: String = ""
-    @State private var description: String = ""
-    @State private var volumeNumber: String = ""
-    @State private var save = false
-    
+    @Query private var allBookShelf: [Shelf]
+    @State private var currentBookIndex: Int = 0
+    @Environment(\.modelContext) private var modelContext
+    @Environment(\.dismiss) private var dismiss
     var body: some View {
-        VStack {
-            
+        VStack() {
             ZStack(alignment: .top) {
-                // App Logo Here...
                 Text(" LibraLife")
                     .foregroundColor(.white)
                     .font(.system(size: 32, weight: .bold))
-//                    .frame(alignment: .leading)
             }
             .padding([.bottom, .trailing], 20)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(Color(red: 0.4784, green: 0.7176, blue: 0.8196))
-            
+            Spacer()
             VStack {
-                Text("Fill Out the Details")
-                    .bold()
-                    .padding([.bottom, .top], 20)
-                
-                Text("Title")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, 18)
-                TextField("Title", text: $bookTitle)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                if allBookShelf.isEmpty{
+                    VStack{
+                        Text("You don't have any books in your shelf")
+                            .bold()
+                            .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
+                        
+                    }
+                    .foregroundStyle(.gray.opacity(0.7))
+                }else{
+                    BookView(bookShelf: allBookShelf[currentBookIndex])
+                    
+                    HStack {
+                        Button(action: {
+                            if currentBookIndex > 0 {
+                                currentBookIndex -= 1
+                            }
+                        }) {
+                            Image(systemName: "chevron.left.circle")
+                        }
+                        Text("\(currentBookIndex + 1) / \(allBookShelf.count)")
+                        Button(action: {
+                            if currentBookIndex < allBookShelf.count - 1 {
+                                currentBookIndex += 1
+                            }
+                        }) {
+                            Image(systemName: "chevron.right.circle")
+                        }
+                    }
                     .padding()
-                
-//                Spacer()
-                
-                Text("Author")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, 18)
-                TextField("Author", text: $author)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                
-//                Spacer()
-                
-                Text("Description")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, 18)
-                TextField("Description", text: $description, axis: .vertical)
-                    .textFieldStyle(.roundedBorder)
-                    .lineLimit(5, reservesSpace: true)
-                    .padding()
-                
-//                Spacer()
-                
-                Text("Volume Number")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, 18)
-                TextField("Volume Number", text: $volumeNumber)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                
-                Button("Save") {
-                    save.toggle()
+                    Button(action: {
+                        let bookShelf = allBookShelf[currentBookIndex]
+                        modelContext.delete(bookShelf)
+                        dismiss()
+                        if currentBookIndex == allBookShelf.count-1 && allBookShelf.count>1{
+                            currentBookIndex -= 1
+                        }
+                        
+                        
+                    }) {
+                        Text("Delete")
+                            .foregroundColor(.white)
+                            .bold()
+                            .padding(EdgeInsets(top: 15, leading: 70, bottom: 15, trailing: 70))
+                            .background(Color.red)
+                            .cornerRadius(25)
+                    }
+      
+                    
                 }
-                    .padding()
-                    .background(Color(red: 1.0, green: 0.5, blue: 0.0))
-                    .foregroundStyle(.white)
-                    .clipShape(Capsule())
-
-                if save {
-                    // action here if clicked
-                    Text("Hello World!")
-                }
-                
-                Spacer()    // do NOT modify this!
             }
+            Spacer()
         }
     }
 }
 
+struct BookView: View {
+    let bookShelf: Shelf
+    var body: some View {
+        VStack {
+            Text(bookShelf.title)
+            Image(bookShelf.title)
+                .resizable()
+                .frame(width: 200, height: 280)
+                .background(.gray)
+
+        }
+    }
+}
 
 #Preview {
     BookDetailsView()
