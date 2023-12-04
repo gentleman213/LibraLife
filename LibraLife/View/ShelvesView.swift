@@ -21,19 +21,20 @@ struct ShelvesView: View {
     ]
 
     var body: some View {
-//        VStack {
-//            Text("Bookshelf Display").font(.system(size: 32, weight: .bold))
+        VStack {
+            Text("Bookshelf Display")
+                .font(.system(size: 32, weight: .bold))
         
-        ZStack(alignment: .top) {
-            // App Logo Here...
-            //Text(" LibraLife")
-                //.foregroundColor(.white)
-                //.font(.system(size: 32, weight: .bold))
-//                    .frame(alignment: .leading)
-        }
-        .padding([.bottom, .trailing], 20)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color(red: 0.4784, green: 0.7176, blue: 0.8196))
+//        ZStack(alignment: .top) {
+//            // App Logo Here...
+//            //Text(" LibraLife")
+//                //.foregroundColor(.white)
+//                //.font(.system(size: 32, weight: .bold))
+////                    .frame(alignment: .leading)
+//        }
+//        .padding([.bottom, .trailing], 20)
+//        .frame(maxWidth: .infinity, alignment: .leading)
+//        .background(Color(red: 0.4784, green: 0.7176, blue: 0.8196))
         
         ZStack {
             Image("shelf")
@@ -49,7 +50,7 @@ struct ShelvesView: View {
                 }
             }
 
-//        }
+        }
     }
 }
 
