@@ -35,6 +35,14 @@ struct ContentView: View {
                 Label("Details", systemImage: "book")
             }
             
+            // Book Details View
+            NavigationView {
+                AddBookView()
+            }
+            .tabItem {
+                Label("Add", systemImage: "plus")
+            }
+            
 
         }
         .modelContainer(for: [Book.self, Shelf.self])

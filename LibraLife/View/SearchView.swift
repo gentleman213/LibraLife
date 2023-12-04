@@ -73,6 +73,7 @@ struct SearchView: View {
                 } else {
                     List(searchResults) { book in
                         HStack {
+                            // Show correct Image for each book
                             Image(book.title)
                                 .resizable()
                                 .frame(width: 100, height: 140)
